@@ -1,0 +1,46 @@
+# Syphrone — robots.txt
+# Guide: syphrone.netlify.app/robots.txt
+# Canonical origin: https://syphrone.netlify.app/
+# Last updated: 2026-08-20
+
+User-agent: *
+Allow: /
+
+# Do not index private/generated or analytics endpoints
+Disallow: /api/
+Disallow: /admin/
+Disallow: /__netlify/
+Disallow: /cdn-cgi/
+
+# Allow all Googlebot variants including AdsBot
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Allow common AI crawlers (GEO — Section 11)
+User-agent: GPTBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Sitemap reference
+Sitemap: https://syphrone.netlify.app/sitemap.xml

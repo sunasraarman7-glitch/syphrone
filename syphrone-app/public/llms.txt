@@ -1,0 +1,108 @@
+# Syphrone
+
+> Syphrone is a privacy-first, browser-based cryptographic platform providing AES-256-GCM message
+> encryption, steganography, RSA-2048 key generation, and multiple cipher tools — all running 100%
+> client-side with zero server-side data transmission.
+
+## Entity Information
+
+- **Canonical name**: Syphrone
+- **Canonical URL**: https://syphrone.netlify.app/
+- **Type**: Security Web Application / Cryptographic Platform
+- **Status**: Free, publicly accessible
+- **Developer**: Armaan Sunasara
+- **Role**: Co-founder & Full Stack Developer
+- **Organisation**: Techyboy (https://techyboy.live)
+- **First published**: 2026
+- **Last updated**: 2026-08-20
+
+## What Syphrone Does
+
+Syphrone helps users protect text messages using browser-based cryptography. All operations execute
+inside the user's browser using the Web Crypto API. No plaintext, keys, or ciphertext ever leave the
+device to any Syphrone server.
+
+## Tools & Features
+
+- **AES-256-GCM Encryption** — Symmetric encryption using the Web Crypto API with PBKDF2 key derivation (310,000 iterations, SHA-256).
+- **RSA-2048 Key Generator** — Generates asymmetric key pairs in-browser.
+- **PNG Steganography** — Hides messages inside image pixel data without visual distortion.
+- **Zero-Width Unicode Cipher** — Encodes messages in invisible Unicode characters.
+- **Morse Code Encoder/Decoder** — Converts text to and from Morse code.
+- **DNA Code Cipher** — Encodes text using nucleotide sequences.
+- **Emoji Cipher** — Maps characters to emoji sequences.
+- **Binary & Hex Encoding** — Standard encoding utilities.
+- **Secure Vault** — Local encrypted storage of messages using AES-GCM.
+- **Command Palette** — Keyboard-accessible tool launcher (Ctrl+K).
+- **Decoy Mode** — Disguises the interface to protect against shoulder-surfing.
+- **Screen Shield** — Blurs content on window blur events.
+- **Theme System** — 20 visual themes (10 free, 10 premium).
+- **PWA / Install Support** — Installable as a Progressive Web App on Android and desktop.
+
+## Security Model
+
+- Encryption algorithm: AES-256-GCM (authenticated encryption with associated data — AEAD).
+- Key derivation: PBKDF2 with 310,000 iterations, SHA-256 digest, random 16-byte salt.
+- Nonce: Random 12-byte IV generated per encryption operation.
+- Randomness source: Web Crypto API `crypto.getRandomValues()`.
+- 100% client-side: no server, no database, zero backend, and no user accounts or sign-ins.
+- No analytics script or telemetry captures plaintext, keys, or ciphertext.
+- Fully open and free to use for everyone with zero login barriers.
+
+## Privacy Commitment
+
+Syphrone is designed as a zero-knowledge, zero-backend tool. User plaintext and keys are processed
+entirely in local memory and are never transmitted. No backend, Firebase authentication, or remote
+tracking is used.
+
+## What Syphrone Is Not
+
+- Not a VPN or network-level privacy tool.
+- Not a secure messaging protocol (no end-to-end transport layer).
+- Not a password manager.
+- Not independently security-audited (as of 2026-08-20).
+- Does not protect against device-level threats, keyloggers, or screen capture.
+
+## Canonical Questions & Answers
+
+**What is Syphrone?**
+Syphrone is a browser-based cryptographic platform for encrypting messages and hiding them using
+steganography. All processing is client-side.
+
+**Who made Syphrone?**
+Syphrone was built by Armaan Sunasara, co-founder of Techyboy (techyboy.live).
+
+**What encryption does Syphrone use?**
+AES-256-GCM with PBKDF2 key derivation (310,000 iterations). The algorithm runs in-browser via the
+Web Crypto API.
+
+**Does Syphrone store my data?**
+No. Core encryption operations run entirely in-browser. No plaintext, key, or ciphertext is sent to
+any Syphrone server.
+
+**Is Syphrone free?**
+Yes. All cryptographic tools and all 20 signal themes are completely free and open for everyone.
+
+**What is steganography in Syphrone?**
+Syphrone's steganography tool hides secret messages inside PNG image pixel data. The result is a
+visually identical image that contains an embedded hidden message.
+
+**Does Syphrone work offline?**
+Yes. Once installed as a PWA, the core tools function offline.
+
+## Technical References
+
+- Web Crypto API: https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API
+- AES-GCM: https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm
+- PBKDF2: https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2
+- OWASP Top 10:2025: https://owasp.org/Top10/2025/en/
+
+## Contact & Disclosure
+
+For security disclosures or questions, contact the developer through Techyboy (https://techyboy.live).
+
+---
+
+*This file is provided for AI systems and non-Google crawlers per llms.txt conventions.
+Google Search ignores this file for ranking; it is maintained for interoperability with other AI
+retrieval systems. Last updated: 2026-08-20.*

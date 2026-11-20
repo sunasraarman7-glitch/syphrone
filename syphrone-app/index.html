@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FAVICONS & PWA
+    ═══════════════════════════════════════════════════════════════════ -->
+    <link rel="icon" type="image/png" href="/syphrone-logo.png" />
+    <link rel="apple-touch-icon" href="/syphrone-logo.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#070a13" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Syphrone" />
+    <meta name="application-name" content="Syphrone" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CANONICAL URL
+    ═══════════════════════════════════════════════════════════════════ -->
+    <link rel="canonical" id="canonical-link" href="https://syphrone.netlify.app/" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PRIMARY SEO META — Section 7 of SEO/GEO Guide
+    ═══════════════════════════════════════════════════════════════════ -->
+    <title>Syphrone — Secure Message Encryption &amp; Steganography</title>
+    <meta name="description" content="Encrypt messages online with Syphrone. Privacy-focused browser-based AES-256-GCM encryption, PNG steganography, RSA-2048 key generation and cipher tools — with transparent documentation about how your data is processed. Zero server tracking." />
+    <meta name="keywords" content="Syphrone, AES-256-GCM encryption, message encryption online, steganography tool, RSA-2048 key generator, browser cryptography, client-side encryption, zero-width unicode cipher, Morse code encoder, DNA cipher, privacy tool, Web Crypto API, Armaan Sunasara, Techyboy" />
+    <meta name="author" content="Armaan Sunasara (Techyboy)" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Geo / Language -->
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         OPEN GRAPH — Social Sharing (Section 7)
+    ═══════════════════════════════════════════════════════════════════ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Syphrone" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://syphrone.netlify.app/" />
+    <meta property="og:title" content="Syphrone — Secure Message Encryption &amp; Steganography" />
+    <meta property="og:description" content="Encrypt messages online with Syphrone. Privacy-focused AES-256-GCM encryption, steganography, RSA-2048 key generation — 100% client-side. Transparent data-handling documentation. Zero server tracking." />
+    <meta property="og:image" content="https://i.ibb.co/fdVXv3ww/syphrone.png" />
+    <meta property="og:image:alt" content="Syphrone — Secure Message Encryption Platform" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         TWITTER / X CARD
+    ═══════════════════════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@syphrone" />
+    <meta name="twitter:creator" content="@armaansunasara" />
+    <meta name="twitter:url" content="https://syphrone.netlify.app/" />
+    <meta name="twitter:title" content="Syphrone — Encrypt. Protect. Vanish." />
+    <meta name="twitter:description" content="AES-256-GCM browser encryption + steganography by Armaan Sunasara (Techyboy). Zero data leaves your device." />
+    <meta name="twitter:image" content="https://i.ibb.co/fdVXv3ww/syphrone.png" />
+    <meta name="twitter:image:alt" content="Syphrone cryptographic platform interface" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         STRUCTURED DATA — Schema.org JSON-LD
+         Per Section 10 & 11: entity consistency, question/answer coverage
+    ═══════════════════════════════════════════════════════════════════ -->
+
+    <!-- 1. SoftwareApplication (primary entity) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://syphrone.netlify.app/#app",
+      "name": "Syphrone",
+      "alternateName": ["Syphrone Cryptographic Platform", "Syphrone Encryption Tool"],
+      "url": "https://syphrone.netlify.app/",
+      "applicationCategory": "SecurityApplication",
+      "applicationSubCategory": "Encryption",
+      "operatingSystem": "All — runs in any modern browser",
+      "browserRequirements": "Requires a browser supporting Web Crypto API (Chrome, Firefox, Edge, Safari)",
+      "softwareVersion": "2.0",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-08-20",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "AES-256-GCM message encryption",
+        "PBKDF2 key derivation with 310,000 iterations",
+        "RSA-2048 key pair generation",
+        "PNG steganography — hide messages in images",
+        "Zero-width Unicode cipher",
+        "Morse code encoder and decoder",
+        "DNA code cipher",
+        "Emoji cipher",
+        "Binary and hex encoding",
+        "Secure local vault with AES-GCM storage",
+        "Decoy mode for shoulder-surfing protection",
+        "Screen shield on window blur",
+        "Progressive Web App — installable offline",
+        "20 visual themes",
+        "Command palette (Ctrl+K)",
+        "No server-side data transmission for core tools"
+      ],
+      "screenshot": "https://i.ibb.co/fdVXv3ww/syphrone.png",
+      "author": {
+        "@type": "Person",
+        "@id": "https://syphrone.netlify.app/#author",
+        "name": "Armaan Sunasara",
+        "jobTitle": "Co-founder & Full Stack Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "@id": "https://techyboy.live/#org",
+          "name": "Techyboy",
+          "url": "https://techyboy.live"
+        }
+      },
+      "description": "Syphrone is a privacy-first browser cryptographic platform. It provides AES-256-GCM symmetric encryption, RSA-2048 key generation, PNG steganography, and multiple cipher tools — all running 100% client-side with zero server-side data transmission."
+    }
+    </script>
+
+    <!-- 2. Organization entity (Techyboy) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://techyboy.live/#org",
+      "name": "Techyboy",
+      "url": "https://techyboy.live",
+      "founder": {
+        "@type": "Person",
+        "name": "Armaan Sunasara"
+      },
+      "foundingDate": "2024",
+      "description": "Techyboy builds privacy-focused web tools and security applications.",
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@id": "https://syphrone.netlify.app/#app"
+        }
+      }
+    }
+    </script>
+
+    <!-- 3. WebSite with SearchAction (Sitelinks search box eligible) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://syphrone.netlify.app/#website",
+      "url": "https://syphrone.netlify.app/",
+      "name": "Syphrone",
+      "description": "Privacy-first browser-based message encryption and steganography platform.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://techyboy.live/#org"
+      }
+    }
+    </script>
+
+    <!-- 4. FAQPage — Extended per Section 10 content formula -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Syphrone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syphrone is a privacy-first, browser-based cryptographic platform. It helps you encrypt messages using AES-256-GCM, generate RSA-2048 key pairs, hide messages in images via steganography, and encode text using Morse code, DNA cipher, zero-width Unicode, and other methods — entirely inside your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Syphrone encrypt messages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syphrone uses the Web Crypto API with AES-256-GCM symmetric encryption. Keys are derived from your password using PBKDF2 with 310,000 iterations and a random 16-byte salt. A random 12-byte IV (nonce) is generated per operation. No plaintext or key material is sent to any server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Syphrone store my messages on any server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All core cryptographic operations run 100% client-side inside your browser. No plaintext, encryption key, or ciphertext is ever transmitted to a Syphrone server. The Secure Vault stores encrypted data locally in your browser's storage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What encryption methods does Syphrone support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syphrone supports AES-256-GCM encryption, RSA-2048 key pair generation, PNG steganography (hiding messages in images), zero-width Unicode cipher, Morse code encoding and decoding, DNA code cipher, Emoji cipher, binary encoding, and hex encoding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is steganography in Syphrone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syphrone's steganography tool hides a secret message inside the pixel data of a PNG image. The resulting image looks visually identical to the original but carries the hidden message embedded in the least-significant bits of pixel values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who built Syphrone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syphrone was built by Armaan Sunasara, co-founder and full stack developer at Techyboy (techyboy.live)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Syphrone free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All core cryptographic tools are free. Premium visual themes can be unlocked with Syphrone Coins earned by using the app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Syphrone work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Once installed as a Progressive Web App (PWA), Syphrone's core encryption and decryption tools work without an internet connection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is client-side encryption?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Client-side encryption means the encryption and decryption operations happen entirely inside the user's browser on their own device. The server never sees plaintext data, keys, or intermediate values. Syphrone uses the browser's built-in Web Crypto API for this purpose."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Syphrone not protect against?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syphrone is not a VPN, secure messaging protocol, or password manager. It does not protect against device-level threats, keyloggers, screen capture, or malware on your device. Its encryption is limited to the browser environment."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- 5. BreadcrumbList for site navigation structure -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://syphrone.netlify.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Encrypt",
+          "item": "https://syphrone.netlify.app/#encrypt"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Blog",
+          "item": "https://syphrone.netlify.app/#blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "About",
+          "item": "https://syphrone.netlify.app/#about"
+        }
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PERFORMANCE — FONTS (Section 14)
+         Preconnect + preload critical font subset
+    ═══════════════════════════════════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload only the most critical weight for LCP -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 — deferred to reduce render-blocking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         GOOGLE SEARCH CONSOLE VERIFICATION
+    ═══════════════════════════════════════════════════════════════════ -->
+    <meta name="google-site-verification" content="m2tHxkK37KJIurYzydqike8o5U80gEWglbOe9l2uVNA" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

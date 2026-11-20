@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-syphrone-bg: #070a13;
+  --color-syphrone-card: #0b0f19;
+  --color-syphrone-border: #1e243b;
+  --color-syphrone-primary: #4a6aff;
+  --color-syphrone-secondary: #a855f7;
+  --color-syphrone-text: #f1f5f9;
+  --color-syphrone-muted: #94a3b8;
+
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+
+  --animate-blob: blob 12s infinite ease-in-out;
+  --animate-fade-in: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-up: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-pulse-glow: pulseGlow 2.5s ease-in-out infinite;
+  --animate-scanner: scanner 3s ease-in-out infinite;
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%       { transform: translate3d(20px, -28px, 0) scale(1.05); }
+  66%       { transform: translate3d(-18px, 20px, 0) scale(0.96); }
+}
+@keyframes fadeIn {
+  0%   { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  0%   { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(74, 106, 255, 0.2); }
+  50%       { box-shadow: 0 0 25px rgba(168, 85, 247, 0.35); }
+}
+@keyframes scanner {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ─── CSS Variables (Signal Palettes) ─── */
+:root {
+  --syph-primary: #4a6aff;
+  --syph-secondary: #a855f7;
+  --syph-bg: #070a13;
+  --syph-card: #0b0f19;
+  --syph-border: #1e243b;
+  --syph-text: #f1f5f9;
+  --syph-muted: #94a3b8;
+}
+
+/* ─── Base ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--syph-bg);
+  color: var(--syph-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  letter-spacing: -0.011em;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Glass Cards & Surfaces ─── */
+.glass-card {
+  background: rgba(11, 15, 25, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 36, 59, 0.85);
+  box-shadow: 0 4px 18px -2px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transform: translateZ(0);
+}
+
+.glass-card:hover {
+  border-color: rgba(74, 106, 255, 0.3);
+}
+
+.glass-strong {
+  background: rgba(10, 14, 28, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  transform: translateZ(0);
+}
+
+.glass-surface {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+header, nav {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* ─── Gradients & Typography ─── */
+.text-gradient {
+  background: linear-gradient(135deg, var(--syph-primary, #4a6aff), var(--syph-secondary, #a855f7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #00e5ff, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--syph-primary, #4a6aff), var(--syph-secondary, #a855f7));
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, rgba(74, 106, 255, 0.15), rgba(168, 85, 247, 0.15));
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, var(--syph-primary, #4a6aff), var(--syph-secondary, #a855f7));
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+.btn-gradient:hover {
+  box-shadow: 0 0 25px rgba(74, 106, 255, 0.4);
+  transform: translateY(-1px);
+}
+.btn-gradient:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* ─── Input Fields ─── */
+.input-field {
+  background-color: rgba(7, 10, 19, 0.85);
+  border: 1px solid var(--syph-border, #1e243b);
+  color: var(--syph-text, #f1f5f9);
+  font-size: 16px; /* prevent iOS auto-zoom */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.input-field:focus {
+  outline: none;
+  background-color: rgba(11, 15, 25, 0.95);
+  border-color: var(--syph-primary, #4a6aff);
+  box-shadow: 0 0 0 3px rgba(74, 106, 255, 0.18);
+}
+.input-field::placeholder {
+  color: rgba(148, 163, 184, 0.45);
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(7, 10, 19, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(74, 106, 255, 0.35);
+  border-radius: 9999px;
+  transition: background 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.6);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--syph-primary, #4a6aff);
+}
+
+/* ─── Screen Shield ─── */
+.screen-shield-active {
+  filter: blur(24px);
+  pointer-events: none;
+  user-select: none;
+  transition: filter 0.3s ease;
+}
+
+/* ─── Decoy Overlay ─── */
+.decoy-overlay {
+  position: fixed;
+  inset: 0;
+  background: #f8fafc;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+}
+
+/* ─── Modal ─── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-container {
+  background: #0b0f19;
+  border: 1px solid #1e243b;
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 35px rgba(74, 106, 255, 0.1);
+}
+
+/* Mobile: bottom sheet */
+@media (max-width: 640px) {
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+  .modal-container {
+    max-width: 100%;
+    border-radius: 1.75rem 1.75rem 0 0;
+    max-height: 88vh;
+    border-bottom: none;
+  }
+}
+
+/* ─── Bottom Sheet Handle Indicator ─── */
+.bottom-sheet-handle {
+  width: 36px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  margin: 8px auto 4px auto;
+}
+
+/* ─── Command Palette ─── */
+.command-palette-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10vh 1rem 1rem 1rem;
+}
+
+/* ─── Touch Targets ─── */
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Entropy Bars ─── */
+.entropy-bar {
+  border-radius: 3px 3px 0 0;
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─── Vault Animation ─── */
+@keyframes vaultUnlock {
+  0%   { transform: scale(1) rotate(0deg); }
+  25%  { transform: scale(1.2) rotate(-12deg); }
+  50%  { transform: scale(1.15) rotate(10deg); }
+  75%  { transform: scale(1.25) rotate(-5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+.vault-unlock { animation: vaultUnlock 0.6s ease; }
+
+/* ─── Spinner ─── */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner {
+  display: inline-block;
+  width: 18px; height: 18px;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* ─── Password Strength Bar ─── */
+.strength-bar {
+  height: 5px;
+  border-radius: 9999px;
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+/* ─── Pre-rendered SEO Container ─── */
+.pre-rendered-seo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: #f1f5f9;
+  line-height: 1.7;
+}
+
+/* ─── Code Snippets ─── */
+pre, code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ─── Safe-area (notched devices) ─── */
+.pb-safe { padding-bottom: max(env(safe-area-inset-bottom), 12px); }
+.pt-safe { padding-top: max(env(safe-area-inset-top), 12px); }
